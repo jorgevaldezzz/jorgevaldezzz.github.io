@@ -3,22 +3,23 @@ name: Deploy static content to Pages
 on:
   push:
     branches:
-      - main  # Runs on push to main branch
+      - main  # Deploys when you push to main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Deploy to GitHub Pages
+      - name: Configure Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload site content
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: ./  # Uploads everything in the repository root
+          path: ./  # deploy everything in the repository root
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
