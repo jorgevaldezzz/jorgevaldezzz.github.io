@@ -50,6 +50,18 @@
       margin-bottom: 1rem;
     }
 
+    .project a {
+      margin-right: 1rem;
+      color: #38bdf8;
+    }
+
+    img.resume {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      margin-top: 1rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -66,6 +78,7 @@
   <p>Computer Science • Cybersecurity • Embedded Systems</p>
   <nav>
     <a href="#about">About</a>
+    <a href="#resume">Resume</a>
     <a href="#projects">Projects</a>
     <a href="#ctfWriteUps">CTF WriteUps</a>
     <a href="#contact">Contact</a>
@@ -83,6 +96,13 @@
     </p>
   </section>
 
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can view or download my resume below.</p>
+    <a href="resume.png" download>Download Resume</a>
+    <img src="resume.png" alt="Jorge Valdez Resume" class="resume">
+  </section>
+
   <section id="projects">
     <h2>Projects</h2>
 
@@ -92,17 +112,31 @@
         A multi-phase chess application built to explore full-stack development,
         game logic, and how to secure a website.
       </p>
-      <p>
-        <strong>Tech:</strong> Python, JavaScript, HTML/CSS
-      </p>
-      <a href="https://jorgevaldezzz.github.io/chess-project/" target="_blank">View on GitHub</a>
+      <p><strong>Tech:</strong> Python, JavaScript, HTML/CSS</p>
+      <a href="https://jorgevaldezzz.github.io/chess-project/" target="_blank">Live Site</a>
+      <a href="https://github.com/jorgevaldezzz/chess-project" target="_blank">GitHub Repo</a>
     </div>
 
     <div class="project">
-      <h3>Cybersecurity Projects (Coming Soon)</h3>
+      <h3>Object Design Web Application - BridgeOut</h3>
       <p>
-        Reverse engineering, malware analysis, and system security labs.
+        A collaborative web application developed to practice software design principles,
+        backend integration, and team-based development workflows.
       </p>
+      <p><strong>Tech:</strong> Python, Flask, HTML/CSS</p>
+      <a href="https://jorgevaldez.pythonanywhere.com" target="_blank">Live Site</a>
+      <a href="https://github.com/Books4life01/CS2340-Group3-Project2" target="_blank">GitHub Repo</a>
+    </div>
+
+    <div class="project">
+      <h3>Movie Store Project</h3>
+      <p>
+        A design-focused project exploring object-oriented programming concepts,
+        modular architecture, and building maintainable systems.
+      </p>
+      <p><strong>Tech:</strong> Python, Flask, HTML/CSS</p>
+      <a href="https://abdillahvanorden.pythonanywhere.com" target="_blank">Live Site</a>
+      <a href="https://github.com/jorgevaldezzz/ObjectsDesign" target="_blank">GitHub Repo</a>
     </div>
 
   </section>
@@ -111,7 +145,6 @@
     <h2>CTF Write Ups</h2>
     <h3>Here I'll be categorizing CTFs I have solved based on competition and rigor.</h3>
     <a href="https://github.com/jorgevaldezzz/ctf-writeups" target="_blank">View on GitHub</a>
-    
   </section>
 
   <section id="contact">
