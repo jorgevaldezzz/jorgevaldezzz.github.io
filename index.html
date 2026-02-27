@@ -67,6 +67,36 @@
       padding: 2rem;
       border-top: 1px solid #334155;
       color: #94a3b8;
+
+      .resume-button {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.resume-button:hover {
+  background-color: #0ea5e9;
+  transform: translateY(-1px);
+}
+
+.resume-container {
+  margin-top: 1rem;
+  background: #1e293b;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
     }
   </style>
 </head>
@@ -98,13 +128,14 @@
 
   <section id="resume">
   <h2>Resume</h2>
-  <button onclick="toggleResume()" style="margin-bottom:1rem;">
+
+  <button class="resume-button" onclick="toggleResume()">
     View Resume
   </button>
 
-  <div id="resumeContainer" style="display:none;">
+  <div id="resumeContainer" class="resume-container" style="display:none;">
     <img src="resume.png" alt="Jorge Valdez Resume" class="resume">
-    <p>
+    <p style="margin-top:0.5rem;">
       <a href="resume.png" download>Download Resume</a>
     </p>
   </div>
@@ -115,7 +146,22 @@
     const r = document.getElementById("resumeContainer");
     r.style.display = r.style.display === "none" ? "block" : "none";
   }
+
+  function toggleResume() {
+  const r = document.getElementById("resumeContainer");
+  const btn = document.querySelector(".resume-button");
+
+  if (r.style.display === "none") {
+    r.style.display = "block";
+    btn.textContent = "Hide Resume";
+  } else {
+    r.style.display = "none";
+    btn.textContent = "View Resume";
+  }
+}
 </script>
+
+  
   
   <section id="projects">
     <h2>Projects</h2>
