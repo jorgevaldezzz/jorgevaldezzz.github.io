@@ -97,12 +97,26 @@
   </section>
 
   <section id="resume">
-    <h2>Resume</h2>
-    <p>You can view or download my resume below.</p>
-    <a href="resume.png" download>Download Resume</a>
-    <img src="resume.png" alt="Jorge Valdez Resume" class="resume">
-  </section>
+  <h2>Resume</h2>
+  <button onclick="toggleResume()" style="margin-bottom:1rem;">
+    View Resume
+  </button>
 
+  <div id="resumeContainer" style="display:none;">
+    <img src="resume.png" alt="Jorge Valdez Resume" class="resume">
+    <p>
+      <a href="resume.png" download>Download Resume</a>
+    </p>
+  </div>
+</section>
+
+<script>
+  function toggleResume() {
+    const r = document.getElementById("resumeContainer");
+    r.style.display = r.style.display === "none" ? "block" : "none";
+  }
+</script>
+  
   <section id="projects">
     <h2>Projects</h2>
 
@@ -120,11 +134,12 @@
     <div class="project">
       <h3>Object Design Web Application - BridgeOut</h3>
       <p>
-        A collaborative web application developed to practice software design principles,
-        backend integration, and team-based development workflows.
+        A collaborative two-sprint project in which CS2340 demanded that we refine 
+        our Web Application skills, our collaboration skills, and our creativity in creating
+        a LinkedIn-esque website.
       </p>
-      <p><strong>Tech:</strong> Python, Flask, HTML/CSS</p>
-      <a href="https://jorgevaldez.pythonanywhere.com" target="_blank">Live Site</a>
+      <p><strong>Tech:</strong> Python, Django, HTML/CSS</p>
+      <a href="https://abdillahvanorden.pythonanywhere.com" target="_blank">Live Site</a>
       <a href="https://github.com/Books4life01/CS2340-Group3-Project2" target="_blank">GitHub Repo</a>
     </div>
 
@@ -134,8 +149,8 @@
         A design-focused project exploring object-oriented programming concepts,
         modular architecture, and building maintainable systems.
       </p>
-      <p><strong>Tech:</strong> Python, Flask, HTML/CSS</p>
-      <a href="https://abdillahvanorden.pythonanywhere.com" target="_blank">Live Site</a>
+      <p><strong>Tech:</strong> Python, Django, HTML/CSS</p>
+      <a href="https://jorgevaldez.pythonanywhere.com " target="_blank">Live Site</a>
       <a href="https://github.com/jorgevaldezzz/ObjectsDesign" target="_blank">GitHub Repo</a>
     </div>
 
