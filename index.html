@@ -5,101 +5,87 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jorge Valdez | Portfolio</title>
 <style>
-  body {
-    margin: 0;
-    font-family: "Inter", system-ui, -apple-system, sans-serif;
-    background-color: #0f172a;
-    color: #e0e0e0;
-    line-height: 1.6;
-  }
-
-  a { color: #38bdf8; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  main { max-width: 900px; margin: auto; padding: 2rem; }
-
-  header {
-    padding: 2rem;
-    border-bottom: 1px solid #334155;
-    text-align: center;
-  }
-
-  header h1 { font-size: 2.4rem; margin-bottom: 0.25rem; color: #f1f5f9; }
-  header p { margin-top:0; color: #94a3b8; }
-
-  nav { margin-top: 1rem; }
-  nav a { margin: 0 0.8rem; font-weight: 500; }
-
-  section { margin-bottom: 3rem; padding: 1rem 0; }
-
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #334155;
-    padding-bottom: 0.3rem;
-  }
-
-  .resume-button {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    background: #1e293b;
-    color: #38bdf8;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    transition: background 0.15s ease, transform 0.15s ease;
-  }
-  .resume-button:hover {
-    background: #334155;
-    transform: translateY(-1px);
-  }
-
-  #resumeContainer {
-    margin-top: 1rem;
-    display: none;
-  }
-
-  #resumeContainer img {
-    max-width: 100%;
-    border-radius: 6px;
-    border: 1px solid #334155;
-    margin-top: 1rem;
-  }
-
-  .link-button {
-    display: inline-block;
-    padding: 0.45rem 0.9rem;
-    margin: 0.5rem 0.5rem 0 0;
-    border-radius: 6px;
-    background: #1e293b;
-    color: #38bdf8;
-    font-weight: 500;
-    transition: background 0.15s ease, transform 0.15s ease;
-  }
-  .link-button:hover {
-    background: #334155;
-    transform: translateY(-1px);
-  }
-
-  .project {
-    background: #1e293b;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1.2rem;
-  }
-  .project h3 { margin: 0 0 0.5rem 0; }
-  .project p { margin: 0.25rem 0; }
-
-  #contact a { font-weight: 500; }
-
-  footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid #334155;
-    color: #94a3b8;
-  }
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: #0f172a;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+main { max-width: 900px; margin: auto; padding: 2rem; }
+header {
+  padding: 2rem;
+  border-bottom: 1px solid #334155;
+  text-align: center;
+}
+header h1 { font-size: 2.4rem; margin-bottom: 0.25rem; color: #f1f5f9; }
+header p { margin-top:0; color: #94a3b8; }
+nav { margin-top: 1rem; }
+nav a { margin: 0 0.8rem; font-weight: 500; }
+section { margin-bottom: 3rem; padding: 1rem 0; }
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 0.3rem;
+}
+.resume-button {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  background: #1e293b;
+  color: #38bdf8;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.resume-button:hover {
+  background: #334155;
+  transform: translateY(-1px);
+}
+#resumeContainer {
+  margin-top: 1rem;
+  display: none;
+}
+#resumeContainer img {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  margin-top: 1rem;
+}
+.link-button {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  margin: 0.5rem 0.5rem 0 0;
+  border-radius: 6px;
+  background: #1e293b;
+  color: #38bdf8;
+  font-weight: 500;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.link-button:hover {
+  background: #334155;
+  transform: translateY(-1px);
+}
+.project {
+  background: #1e293b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+}
+.project h3 { margin: 0 0 0.5rem 0; }
+.project p { margin: 0.25rem 0; }
+#contact a { font-weight: 500; }
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+}
 </style>
 </head>
 <body>
@@ -109,7 +95,6 @@
   <p>Computer Science • Cybersecurity • Embedded Systems</p>
   <nav>
     <a href="#about">About</a>
-    <a href="#resume">Resume</a>
     <a href="#projects">Projects</a>
     <a href="#ctfWriteUps">CTF WriteUps</a>
     <a href="#contact">Contact</a>
@@ -119,11 +104,9 @@
 <main>
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a Computer Science student at Georgia Tech focused on cybersecurity and embedded systems. I enjoy understanding how systems work beneath the surface, whether that means web applications, analyzing software vulnerabilities, or exploring computer architecture and low-level programming. I like projects that combine problem-solving, design, and security into something tangible.</p>
-  </section>
-
-  <section id="resume">
-    <h2>Resume</h2>
+    <p>
+      I’m a Computer Science student at Georgia Tech focused on cybersecurity and embedded systems. I enjoy understanding how systems work beneath the surface, whether that means web applications, analyzing software vulnerabilities, or exploring computer architecture and low-level programming. I like projects that combine problem-solving, design, and security into something tangible.
+    </p>
     <button class="resume-button" onclick="toggleResume()">View Resume</button>
     <div id="resumeContainer">
       <img src="resume.png" alt="Jorge Valdez Resume">
@@ -176,17 +159,17 @@
 </footer>
 
 <script>
-  function toggleResume() {
-    const container = document.getElementById('resumeContainer');
-    const button = document.querySelector('.resume-button');
-    if (container.style.display === 'none' || container.style.display === '') {
-      container.style.display = 'block';
-      button.textContent = 'Hide Resume';
-    } else {
-      container.style.display = 'none';
-      button.textContent = 'View Resume';
-    }
+function toggleResume() {
+  const container = document.getElementById('resumeContainer');
+  const button = document.querySelector('.resume-button');
+  if (container.style.display === 'none' || container.style.display === '') {
+    container.style.display = 'block';
+    button.textContent = 'Hide Resume';
+  } else {
+    container.style.display = 'none';
+    button.textContent = 'View Resume';
   }
+}
 </script>
 
 </body>
