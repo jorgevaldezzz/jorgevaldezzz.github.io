@@ -39,7 +39,34 @@
     padding-bottom: 0.3rem;
   }
 
-  #resume img { max-width: 100%; border-radius: 6px; border: 1px solid #334155; margin-top: 1rem; }
+  .resume-button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    background: #1e293b;
+    color: #38bdf8;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .resume-button:hover {
+    background: #334155;
+    transform: translateY(-1px);
+  }
+
+  #resumeContainer {
+    margin-top: 1rem;
+    display: none;
+  }
+
+  #resumeContainer img {
+    max-width: 100%;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    margin-top: 1rem;
+  }
 
   .link-button {
     display: inline-block;
@@ -73,7 +100,6 @@
     border-top: 1px solid #334155;
     color: #94a3b8;
   }
-
 </style>
 </head>
 <body>
@@ -98,8 +124,11 @@
 
   <section id="resume">
     <h2>Resume</h2>
-    <p><a href="resume.png" download class="link-button">Download Resume</a></p>
-    <img src="resume.png" alt="Jorge Valdez Resume">
+    <button class="resume-button" onclick="toggleResume()">View Resume</button>
+    <div id="resumeContainer">
+      <img src="resume.png" alt="Jorge Valdez Resume">
+      <p><a href="resume.png" download class="link-button">Download Resume</a></p>
+    </div>
   </section>
 
   <section id="projects">
@@ -146,6 +175,19 @@
   <p>© 2026 Jorge Valdez</p>
 </footer>
 
+<script>
+  function toggleResume() {
+    const container = document.getElementById('resumeContainer');
+    const button = document.querySelector('.resume-button');
+    if (container.style.display === 'none' || container.style.display === '') {
+      container.style.display = 'block';
+      button.textContent = 'Hide Resume';
+    } else {
+      container.style.display = 'none';
+      button.textContent = 'View Resume';
+    }
+  }
+</script>
+
 </body>
 </html>
- 
