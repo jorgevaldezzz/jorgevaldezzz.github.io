@@ -1,176 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jorge Valdez | Portfolio</title>
-<style>
-body {
-  margin: 0;
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
-  background-color: #0f172a;
-  color: #e0e0e0;
-  line-height: 1.6;
-}
-a { color: #38bdf8; text-decoration: none; }
-a:hover { text-decoration: underline; }
-main { max-width: 900px; margin: auto; padding: 2rem; }
-header {
-  padding: 2rem;
-  border-bottom: 1px solid #334155;
-  text-align: center;
-}
-header h1 { font-size: 2.4rem; margin-bottom: 0.25rem; color: #f1f5f9; }
-header p { margin-top:0; color: #94a3b8; }
-nav { margin-top: 1rem; }
-nav a { margin: 0 0.8rem; font-weight: 500; }
-section { margin-bottom: 3rem; padding: 1rem 0; }
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #334155;
-  padding-bottom: 0.3rem;
-}
-.resume-button {
-  display: inline-block;
-  margin-top: 0.8rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  background: #1e293b;
-  color: #38bdf8;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.15s ease;
-}
-.resume-button:hover {
-  background: #334155;
-  transform: translateY(-1px);
-}
-#resumeContainer {
-  margin-top: 1rem;
-  display: none;
-}
-#resumeContainer img {
-  max-width: 100%;
-  border-radius: 6px;
-  border: 1px solid #334155;
-  margin-top: 1rem;
-}
-.link-button {
-  display: inline-block;
-  padding: 0.45rem 0.9rem;
-  margin: 0.5rem 0.5rem 0 0;
-  border-radius: 6px;
-  background: #1e293b;
-  color: #38bdf8;
-  font-weight: 500;
-  transition: background 0.15s ease, transform 0.15s ease;
-}
-.link-button:hover {
-  background: #334155;
-  transform: translateY(-1px);
-}
-.project {
-  background: #1e293b;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1.2rem;
-}
-.project h3 { margin: 0 0 0.5rem 0; }
-.project p { margin: 0.25rem 0; }
-#contact a { font-weight: 500; }
-footer {
-  text-align: center;
-  padding: 2rem;
-  border-top: 1px solid #334155;
-  color: #94a3b8;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jorge Valdez | Portfolio</title>
+  <meta
+    name="description"
+    content="Jorge Valdez is a Georgia Tech computer science student focused on cybersecurity, embedded systems, and software engineering."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
-
-<header>
-  <h1>Jorge Valdez</h1>
-  <p>Computer Science • Cybersecurity • Embedded Systems</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#ctfWriteUps">CTF WriteUps</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<main>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a Computer Science student at Georgia Tech focused on cybersecurity and embedded systems. I enjoy understanding how systems work beneath the surface, whether that means web applications, analyzing software vulnerabilities, or exploring computer architecture and low-level programming. I like projects that combine problem-solving, design, and security into something tangible.
-    </p>
-    <button class="resume-button" onclick="toggleResume()">View Resume</button>
-    <div id="resumeContainer">
-      <img src="resume.png" alt="Jorge Valdez Resume">
-      <p><a href="resume.png" download class="link-button">Download Resume</a></p>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark">Jorge Valdez</span>
+        <span class="brand-note">Computer Science / Cybersecurity / Embedded Systems</span>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Highlights</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section id="projects">
-    <h2>Projects</h2>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-grid">
+        <article class="hero-copy reveal">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Computer Science student focused on security and systems.</h1>
+          <p class="hero-lead">
+            I am Jorge Valdez, a Georgia Tech computer science student with interests in
+            cybersecurity, embedded systems, and software engineering. I enjoy building
+            projects that improve my technical depth and help me better understand how
+            systems behave in practice.
+          </p>
 
-    <div class="project">
-      <h3>♟ Chess Web App</h3>
-      <p>A multi-phase chess application built to explore full-stack development and security.</p>
-      <p><strong>Tech:</strong> Python, JavaScript, HTML/CSS</p>
-      <a href="https://jorgevaldezzz.github.io/chess-project/" target="_blank" class="link-button">Live Site</a>
-      <a href="https://github.com/jorgevaldezzz/chess-project" target="_blank" class="link-button">GitHub Repo</a>
-    </div>
+          <div class="pill-row" aria-label="Focus areas">
+            <span class="pill">Cybersecurity</span>
+            <span class="pill">Embedded Systems</span>
+            <span class="pill">Software Design</span>
+            <span class="pill">CTF Writeups</span>
+          </div>
 
-    <div class="project">
-      <h3>BridgeOut - Object Design Web App</h3>
-      <p>Collaborative project focused on software design, teamwork, and full-stack development.</p>
-      <p><strong>Tech:</strong> Python, Django, HTML/CSS</p>
-      <a href="https://abdillahvanorden.pythonanywhere.com" target="_blank" class="link-button">Live Site</a>
-      <a href="https://github.com/Books4life01/CS2340-Group3-Project2" target="_blank" class="link-button">GitHub Repo</a>
-    </div>
+          <div class="actions">
+            <a class="button" href="#projects">See My Work</a>
+            <a class="ghost-button" href="resume.png" download>Download Resume</a>
+          </div>
 
-    <div class="project">
-      <h3>Movie Store Project</h3>
-      <p>A design-focused project exploring object-oriented programming and modular architecture.</p>
-      <p><strong>Tech:</strong> Python, Django, HTML/CSS</p>
-      <a href="https://jorgevaldez.pythonanywhere.com" target="_blank" class="link-button">Live Site</a>
-      <a href="https://github.com/jorgevaldezzz/Movie-Store" target="_blank" class="link-button">GitHub Repo</a>
-    </div>
-  </section>
+          <div class="stat-row">
+            <div class="stat">
+              <strong>3+</strong>
+              live projects
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              CTF writeup repository
+            </div>
+            <div class="stat">
+              <strong>Focus</strong>
+              security and low-level systems
+            </div>
+          </div>
+        </article>
 
-  <section id="ctfWriteUps">
-    <h2>CTF Write Ups</h2>
-    <a href="https://github.com/jorgevaldezzz/ctf-writeups" target="_blank" class="link-button">View on GitHub</a>
-  </section>
+        <aside class="hero-card reveal">
+          <section class="mini-card">
+            <p class="section-kicker">Current Focus</p>
+            <h2>Current work</h2>
+            <ul>
+              <li>Studying software behavior at the application and system level.</li>
+              <li>Building projects that strengthen my engineering and security skills.</li>
+              <li>Documenting technical work clearly through project notes and writeups.</li>
+            </ul>
+          </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:valdezjorge841@gmail.com">valdezjorge841@gmail.com</a></p>
-    <p><a href="https://github.com/jorgevaldezzz" target="_blank">GitHub Profile</a></p>
-  </section>
-</main>
+          <section class="mini-card">
+            <p class="section-kicker">Quick Snapshot</p>
+            <ul>
+              <li>Student at Georgia Tech</li>
+              <li>Interested in cybersecurity and embedded systems</li>
+              <li>Experience with static sites and Django-based projects</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </section>
 
-<footer>
-  <p>© 2026 Jorge Valdez</p>
-</footer>
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <p class="section-kicker">About Me</p>
+        <h2>About</h2>
+        <p>
+          This portfolio is a summary of my background, technical interests, and project work.
+        </p>
+      </div>
 
-<script>
-function toggleResume() {
-  const container = document.getElementById('resumeContainer');
-  const button = document.querySelector('.resume-button');
-  if (container.style.display === 'none' || container.style.display === '') {
-    container.style.display = 'block';
-    button.textContent = 'Hide Resume';
-  } else {
-    container.style.display = 'none';
-    button.textContent = 'View Resume';
-  }
-}
-</script>
+      <div class="section-grid">
+        <article class="panel about-story reveal">
+          <h3>Background</h3>
+          <p>
+            I am interested in work that combines software engineering with a deeper
+            understanding of systems. That includes how software is structured, how it
+            behaves under real conditions, and where security and reliability matter most.
+          </p>
+          <p>
+            My main areas of interest are cybersecurity, embedded systems, and low-level
+            computing. I also value clear implementation, maintainable structure, and
+            practical project experience.
+          </p>
+        </article>
 
+        <aside class="panel about-side reveal">
+          <h3>Strengths</h3>
+          <div class="quick-list">
+            <span class="quick-item">Problem Solving</span>
+            <span class="quick-item">Security Focus</span>
+            <span class="quick-item">Clean Implementation</span>
+            <span class="quick-item">Documentation</span>
+            <span class="quick-item">Systems Thinking</span>
+            <span class="quick-item">Iterative Development</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-head reveal">
+        <p class="section-kicker">Experience</p>
+        <h2>Experience</h2>
+        <p>
+          My experience so far has come through coursework, independent projects, and
+          technical writing.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-head">
+            <h3>Georgia Tech Computer Science Student</h3>
+            <span class="timeline-meta">Education</span>
+          </div>
+          <p>
+            Studying computer science with a focus on cybersecurity, embedded systems, and
+            software fundamentals.
+          </p>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-head">
+            <h3>Independent Project Builder</h3>
+            <span class="timeline-meta">Project Work</span>
+          </div>
+          <p>
+            Building personal and academic projects to strengthen implementation,
+            architecture, deployment, and software design skills.
+          </p>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-head">
+            <h3>Security Learner and Writeup Author</h3>
+            <span class="timeline-meta">Technical Writing</span>
+          </div>
+          <p>
+            Maintaining public CTF writeups to document technical challenges, solutions,
+            and lessons learned.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <p class="section-kicker">Skills</p>
+        <h2>Skills</h2>
+        <p>
+          These are the main areas I continue developing through projects and coursework.
+        </p>
+      </div>
+
+      <div class="section-grid">
+        <div class="skills-layout">
+          <article class="panel reveal">
+            <h3>Core Interests</h3>
+            <div class="stack-list">
+              <span class="stack-item">Cybersecurity</span>
+              <span class="stack-item">Embedded Systems</span>
+              <span class="stack-item">Computer Architecture</span>
+              <span class="stack-item">Low-level Programming</span>
+            </div>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Build Stack</h3>
+            <div class="stack-list">
+              <span class="stack-item">Python</span>
+              <span class="stack-item">Django</span>
+              <span class="stack-item">JavaScript</span>
+              <span class="stack-item">HTML/CSS</span>
+            </div>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Working Style</h3>
+            <div class="stack-list">
+              <span class="stack-item">Problem Solving</span>
+              <span class="stack-item">Interface Thinking</span>
+              <span class="stack-item">Documentation</span>
+              <span class="stack-item">Iterative Refinement</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <div class="section-head reveal">
+        <p class="section-kicker">Highlights</p>
+        <h2>Highlights</h2>
+        <p>
+          A few concrete examples of work I have completed and shared publicly.
+        </p>
+      </div>
+
+      <div class="achievements-grid">
+        <article class="achievement reveal">
+          <span class="achievement-tag">Public Work</span>
+          <h3>Live projects</h3>
+          <p>
+            Several of my projects are deployed publicly and available to review.
+          </p>
+        </article>
+
+        <article class="achievement reveal">
+          <span class="achievement-tag">Learning Trail</span>
+          <h3>CTF writeups</h3>
+          <p>
+            I keep a public repository of writeups to document security challenges and my
+            approach to solving them.
+          </p>
+        </article>
+
+        <article class="achievement reveal">
+          <span class="achievement-tag">Direction</span>
+          <h3>Focused technical interests</h3>
+          <p>
+            My work is consistently centered on security, systems, and software engineering.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <p class="section-kicker">Projects</p>
+        <h2>Projects</h2>
+        <p>
+          Selected projects that reflect my interests and technical development.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project reveal">
+          <span class="project-tag">Web App / Multi-Phase Build</span>
+          <h3>Chess Web App</h3>
+          <p>
+            A multi-phase chess application built to practice full-stack development and
+            structured software implementation.
+          </p>
+          <p><strong>Tech:</strong> Python, JavaScript, HTML, CSS</p>
+          <div class="project-links">
+            <a class="inline-link" href="https://jorgevaldezzz.github.io/chess-project/" target="_blank" rel="noreferrer">Live Site</a>
+            <a class="inline-link" href="https://github.com/jorgevaldezzz/chess-project" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <span class="project-tag">Team Project / Object Design</span>
+          <h3>BridgeOut</h3>
+          <p>
+            A team-based web application focused on software design, collaboration, and
+            product implementation.
+          </p>
+          <p><strong>Tech:</strong> Python, Django, HTML, CSS</p>
+          <div class="project-links">
+            <a class="inline-link" href="https://abdillahvanorden.pythonanywhere.com" target="_blank" rel="noreferrer">Live Site</a>
+            <a class="inline-link" href="https://github.com/Books4life01/CS2340-Group3-Project2" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <span class="project-tag">Software Design / OOP</span>
+          <h3>Movie Store Project</h3>
+          <p>
+            A project focused on object-oriented design, modular organization, and
+            maintainable structure.
+          </p>
+          <p><strong>Tech:</strong> Python, Django, HTML, CSS</p>
+          <div class="project-links">
+            <a class="inline-link" href="https://jorgevaldez.pythonanywhere.com" target="_blank" rel="noreferrer">Live Site</a>
+            <a class="inline-link" href="https://github.com/jorgevaldezzz/Movie-Store" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
+
+        <article class="project reveal" id="writing">
+          <span class="project-tag">Security Notes / Documentation</span>
+          <h3>CTF Writeups</h3>
+          <p>
+            A repository of challenge writeups and notes covering my work on security
+            exercises and related problem solving.
+          </p>
+          <p><strong>Format:</strong> GitHub repository of public writeups</p>
+          <div class="project-links">
+            <a class="inline-link" href="https://github.com/jorgevaldezzz/ctf-writeups" target="_blank" rel="noreferrer">View on GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-head reveal">
+        <p class="section-kicker">Contact</p>
+        <h2>Contact</h2>
+        <p>
+          The best ways to reach me are below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <article class="contact-card reveal">
+          <h3>Get in touch</h3>
+          <ul class="contact-list">
+            <li>Email: <a href="mailto:valdezjorge841@gmail.com">valdezjorge841@gmail.com</a></li>
+            <li>GitHub: <a href="https://github.com/jorgevaldezzz" target="_blank" rel="noreferrer">github.com/jorgevaldezzz</a></li>
+            <li>Portfolio host: <a href="https://jorgevaldezzz.github.io/" target="_blank" rel="noreferrer">jorgevaldezzz.github.io</a></li>
+          </ul>
+          <div class="actions">
+            <a class="button" href="mailto:valdezjorge841@gmail.com">Email Me</a>
+            <a class="ghost-button" href="https://github.com/jorgevaldezzz" target="_blank" rel="noreferrer">GitHub Profile</a>
+          </div>
+        </article>
+
+        <aside class="resume-panel reveal">
+          <h3>Resume Preview</h3>
+          <p>
+            Resume preview with a direct download link.
+          </p>
+          <div class="resume-frame">
+            <img src="resume.png" alt="Resume preview for Jorge Valdez">
+          </div>
+          <div class="actions">
+            <a class="ghost-button" href="resume.png" download>Download Resume</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer reveal">
+      <p>(c) 2026 Jorge Valdez.</p>
+    </footer>
+  </main>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { threshold: 0.16 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
 </body>
 </html>
