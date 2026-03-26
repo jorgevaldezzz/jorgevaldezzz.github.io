@@ -134,6 +134,18 @@ img {
   padding: 2rem;
 }
 
+.hero-intro {
+  max-width: 720px;
+}
+
+.hero-intro h1 {
+  max-width: none;
+}
+
+.hero-intro .actions {
+  margin-bottom: 0;
+}
+
 .eyebrow,
 .section-kicker {
   text-transform: uppercase;
